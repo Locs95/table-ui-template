@@ -1,0 +1,332 @@
+doctype html
+html
+	head
+		link(rel="stylesheet", href="css/main.css")
+	body
+		main
+			div.table-caption
+				div.table-caption__block
+					.table-caption__item
+						span Sorting by:
+					.table-caption__item
+						a.table-caption__link.active(href="#") Product(100g serving) 
+					.table-caption__item
+						a.table-caption__link(href="#") Calories
+					.table-caption__item
+						a.table-caption__link(href="#") Fat(g)
+					.table-caption__item
+						a.table-caption__link(href="#") Carbs(g)
+					.table-caption__item
+						a.table-caption__link(href="#") Protein(g)
+					.table-caption__item
+						a.table-caption__link(href="#") Iron(%)
+				div.table-caption__block
+					.table-caption__item
+						a.table-caption__btn.disabled(href="#") Delete
+					.table-caption__item
+						a.table-caption__select(href="#")
+							span 10 Per Page
+						div.table-caption__select-menu(data-simplebar)
+							.table-caption__select-row
+								div.table-caption__item-text 10 Per Page
+							.table-caption__select-row
+								div.table-caption__item-text 20 Per Page
+							.table-caption__select-row
+								div.table-caption__item-text 30 Per Page
+							.table-caption__select-row
+								div.table-caption__item-text 40 Per Page
+							.table-caption__select-row
+								div.table-caption__item-text 50 Per Page
+							.table-caption__select-row
+								div.table-caption__item-text 60 Per Page
+							.table-caption__select-row
+								div.table-caption__item-text 70 Per Page
+							.table-caption__select-row
+								div.table-caption__item-text 80 Per Page
+							.table-caption__select-row
+								div.table-caption__item-text 90 Per Page
+							.table-caption__select-row
+								div.table-caption__item-text 100 Per Page
+					.table-caption__item
+						div.table-caption__input-group
+							div
+								button.table-caption__input-btn(type="button", data-type="minus", data-field="quant")
+									span.table-caption__arrow-l
+							div
+								span.table-caption__input-numbers 1-2 of 25
+							div
+								button.table-caption__input-btn(type="button", data-type="minus", data-field="quant")
+									span.table-caption__arrow-r
+					.table-caption__item
+						a.table-caption__select(href="#")
+							span 6 columns selected
+						div.table-caption__select-menu(data-simplebar)
+							.table-caption__select-item
+									label.container
+										span.checkbox-label Select All
+										input.checkbox(type="checkbox")
+										span.checkmark  
+							.table-caption__select-item
+									label.container
+										span.checkbox-label Product(100g serving)
+										input.checkbox(type="checkbox")
+										span.checkmark
+							.table-caption__select-item
+									label.container
+										span.checkbox-label Calories
+										input.checkbox(type="checkbox")
+										span.checkmark
+							.table-caption__select-item
+									label.container
+										span.checkbox-label Fat(g)
+										input.checkbox(type="checkbox")
+										span.checkmark
+							.table-caption__select-item
+									label.container
+										span.checkbox-label Carbs(g)
+										input.checkbox(type="checkbox")
+										span.checkmark
+							.table-caption__select-item
+									label.container
+										span.checkbox-label Protein(g)
+										input.checkbox(type="checkbox")
+										span.checkmark
+							.table-caption__select-item
+									label.container
+										span.checkbox-label Iron(%)
+										input.checkbox(type="checkbox")
+										span.checkmark
+			div.table
+				div.table-head
+					.table-h
+						label.container
+							input.checkbox(type="checkbox")
+							span.checkmark
+					.table-h.active Product (100g serving)
+					.table-h Calories
+					.table-h Fat
+					.table-h Carbs
+					.table-h Protein
+					.table-h Iron
+				div.table-row
+					.table-cell
+						label.container
+							input.checkbox(type="checkbox")
+							span.checkmark
+					.table-cell
+						span Frozen Yogurt
+					.table-cell 125
+					.table-cell 224
+					.table-cell 486
+					.table-cell 696
+					.table-cell 536
+					.table-cell
+						div.table-cell__del
+							button delete
+						div.table-cell__confirm
+							p Are you sure you want to delete item?
+							div
+								div
+									button.table-cell__confirm-btn Cancel
+								div
+									button.table-cell__confirm-btn.table-cell__confirm-btn_green Confirm
+				div.table-row
+					.table-cell
+						label.container
+							input.checkbox(type="checkbox")
+							span.checkmark
+					.table-cell
+						span Ice cream sandwich
+					.table-cell 851
+					.table-cell 519
+					.table-cell 735
+					.table-cell 461
+					.table-cell 366
+					.table-cell
+						div.table-cell__del
+							button delete
+						div.table-cell__confirm
+							p Are you sure you want to delete item?
+							div
+								div
+									button.table-cell__confirm-btn Cancel
+								div
+									button.table-cell__confirm-btn.table-cell__confirm-btn_green Confirm
+				div.table-row
+					.table-cell
+						label.container
+							input.checkbox(type="checkbox")
+							span.checkmark
+					.table-cell
+						span Eclair
+					.table-cell 387
+					.table-cell 981
+					.table-cell 745
+					.table-cell 865
+					.table-cell 138
+					.table-cell
+						div.table-cell__del
+							button delete
+						div.table-cell__confirm
+							p Are you sure you want to delete item?
+							div
+								div
+									button.table-cell__confirm-btn Cancel
+								div
+									button.table-cell__confirm-btn.table-cell__confirm-btn_green Confirm
+				div.table-row
+					.table-cell
+						label.container
+							input.checkbox(type="checkbox")
+							span.checkmark
+					.table-cell
+						span Cupcake
+					.table-cell 106
+					.table-cell 758
+					.table-cell 717
+					.table-cell 168
+					.table-cell 306
+					.table-cell
+						div.table-cell__del
+							button delete
+						div.table-cell__confirm
+							p Are you sure you want to delete item?
+							div
+								div
+									button.table-cell__confirm-btn Cancel
+								div
+									button.table-cell__confirm-btn.table-cell__confirm-btn_green Confirm
+				div.table-row
+					.table-cell
+						label.container
+							input.checkbox(type="checkbox")
+							span.checkmark
+					.table-cell
+						span Gingerbread
+					.table-cell 889
+					.table-cell 46
+					.table-cell 493
+					.table-cell 19
+					.table-cell 846
+					.table-cell
+						div.table-cell__del
+							button delete
+						div.table-cell__confirm
+							p Are you sure you want to delete item?
+							div
+								div
+									button.table-cell__confirm-btn Cancel
+								div
+									button.table-cell__confirm-btn.table-cell__confirm-btn_green Confirm
+				div.table-row
+					.table-cell
+						label.container
+							input.checkbox(type="checkbox")
+							span.checkmark
+					.table-cell
+						span Jelly bean
+					.table-cell 987
+					.table-cell 77
+					.table-cell 421
+					.table-cell 820
+					.table-cell 484
+					.table-cell
+						div.table-cell__del
+							button delete
+						div.table-cell__confirm
+							p Are you sure you want to delete item?
+							div
+								div
+									button.table-cell__confirm-btn Cancel
+								div
+									button.table-cell__confirm-btn.table-cell__confirm-btn_green Confirm
+				div.table-row
+					.table-cell
+						label.container
+							input.checkbox(type="checkbox")
+							span.checkmark
+					.table-cell
+						span Lollipop
+					.table-cell 80
+					.table-cell 822
+					.table-cell 268
+					.table-cell 331
+					.table-cell 638
+					.table-cell
+						div.table-cell__del
+							button delete
+						div.table-cell__confirm
+							p Are you sure you want to delete item?
+							div
+								div
+									button.table-cell__confirm-btn Cancel
+								div
+									button.table-cell__confirm-btn.table-cell__confirm-btn_green Confirm
+				div.table-row
+					.table-cell
+						label.container
+							input.checkbox(type="checkbox")
+							span.checkmark
+					.table-cell
+						span Honeycomb
+					.table-cell 995
+					.table-cell 209
+					.table-cell 198
+					.table-cell 345
+					.table-cell 407
+					.table-cell
+						div.table-cell__del
+							button delete
+						div.table-cell__confirm
+							p Are you sure you want to delete item?
+							div
+								div
+									button.table-cell__confirm-btn Cancel
+								div
+									button.table-cell__confirm-btn.table-cell__confirm-btn_green Confirm
+				div.table-row
+					.table-cell
+						label.container
+							input.checkbox(type="checkbox")
+							span.checkmark
+					.table-cell
+						span Donut
+					.table-cell 919
+					.table-cell 576
+					.table-cell 999
+					.table-cell 134
+					.table-cell 584
+					.table-cell
+						div.table-cell__del
+							button delete
+						div.table-cell__confirm
+							p Are you sure you want to delete item?
+							div
+								div
+									button.table-cell__confirm-btn Cancel
+								div
+									button.table-cell__confirm-btn.table-cell__confirm-btn_green Confirm
+				div.table-row
+					.table-cell
+						label.container
+							input.checkbox(type="checkbox")
+							span.checkmark
+					.table-cell
+						span KitKat
+					.table-cell 183
+					.table-cell 45
+					.table-cell 490
+					.table-cell 303
+					.table-cell 175
+					.table-cell
+						div.table-cell__del
+							button delete
+						div.table-cell__confirm
+							p Are you sure you want to delete item?
+							div
+								div
+									button.table-cell__confirm-btn Cancel
+								div
+									button.table-cell__confirm-btn.table-cell__confirm-btn_green Confirm
+			div.main-overlay
+		script(src="js/bundle.js")

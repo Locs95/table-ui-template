@@ -1,0 +1,357 @@
+@import '../node_modules/simplebar/dist/simplebar.css';
+// GLOBAL STYLES
+@font-face {
+	font-family: SourceSansPro-Regular;
+	src: url('../fonts/SourceSansPro-Regular.ttf');
+}
+
+
+/* Customize the label (the container) */
+.container {
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox-label {
+	position: relative;
+	top: -0.157rem;
+}
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.875rem;
+  width: 0.875rem;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #00A11E;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+button {
+	&:active,&:focus {
+		outline: none;
+	}
+}
+select {
+	-webkit-appearance: none;
+	appearance: none;
+	&::-ms-expand {
+		display: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+// GLOBAL STYLES
+.main-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  display: none;
+}
+main {
+	width: 75%;
+	min-width: 768px;
+	margin: 0 auto;
+}
+.table {
+	display: table;
+	width: 100%;
+	&-caption {
+		display: flex;
+		justify-content: space-between;
+		margin: 0.9375rem 0;
+		&__block {
+			display: flex;
+		}
+		&__item {
+			position: relative;
+			display: flex;
+			align-items: center;
+			font-family: SourceSansPro-Regular;
+			font-size: 0.875rem;
+			margin-right: 0.5rem;
+			&:first-child {
+				span {
+					font-weight: 600;
+				}
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&__link {
+			display: block;
+			color: #3D374A;
+			text-decoration: none;
+			padding: 0.5rem 0.5rem;
+			border-radius: 0.125rem;
+			&.active {
+				background: #00A11E;
+				color: #ffffff;
+			}
+		}
+		&__btn {
+			display: inline-block;
+			padding: 0.5rem 1rem;
+			text-decoration: none;
+			border: 1px solid #00A11E;
+			border-radius: 0.125rem;
+			background: #00A11E;
+			color: #ffffff;
+			&.disabled {
+				color: #5B5E77;
+				border: 1px solid #C6CBD4;
+				background: #F2F2F2;
+				pointer-events: none;
+			}
+		}
+		&__select {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-left: 1.6rem;
+			padding-right: 1.6rem;
+			height: 2.1rem;
+			border: 1px solid #D5DAE0;
+			border-radius: 0.125rem;
+			color: #5B5E77;
+			background: url('../img/arrow-down.png') no-repeat 92% center;
+			background-position: auto auto;
+			text-decoration: none;
+			&-menu {
+				position: absolute;
+				top: 3.175rem;
+				left: 0;
+				padding: 1.3125rem 1.0625rem;
+				width: 12.9375rem;
+				height: 15.1875rem;
+				overflow-y: auto;
+				border: 1px solid #ddd;
+				background: #fff;
+				box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+				border-radius: 0.25rem;
+				z-index: 9999;
+				display: none;
+				&.show {
+					display: block;
+				}
+			}
+			&-row {
+				margin-bottom: 1.4375rem;
+				cursor: pointer;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__input-group {
+			display: flex;
+			align-items: center;
+		}
+		&__input-btn {
+			padding: 0.2900rem 0.8rem;
+			font-size: 1.3rem;
+			background: #ffffff;
+			border: 1px solid #D5DAE0;
+			border-radius: 0.125rem;
+		}
+		&__arrow-l {
+			display: block;
+			background: url('../img/arrow-left.png') no-repeat center center;
+			width: 0.5rem;
+			height: 1.5rem;
+		}
+		&__arrow-r {
+			display: block;
+			background: url('../img/arrow-right.png') no-repeat center center;
+			width: 0.5rem;
+			height: 1.5rem;
+		}
+		&__input-numbers {
+			margin: 0 0.5rem;
+			color: #3D374A;
+			font-weight: 600;
+		}
+	}
+	&-head {
+		display: table-header-group;
+	}
+	&-h {
+		display: table-cell;
+		padding: 0.75rem 0.8125rem;
+		font-size: 0.875rem;
+		font-family: SourceSansPro-Regular;
+		font-weight: 600;
+		&.active {
+			color: #00A11E;
+			&::after {
+				position: relative;
+				top: 0.230rem;
+				margin-left: 0.2rem;
+				content: "";
+				display: inline-block;
+				background: url('../img/sort-arrow-up.png') no-repeat center center;
+				width: 1rem;
+				height: 1rem;
+			}
+		}
+	}
+		
+	&-row {
+		display: table-row;
+		cursor: pointer;
+		transition: all 0.1s;
+		&:nth-child(even) {
+			background-color: #ffffff;
+		}
+		&:nth-child(odd) {
+			background-color: #F8F9FA;
+		}
+		&:hover {
+			background: rgba(0, 161, 30, 0.07);
+			& > .table-cell {
+				span {
+					color: #282136;
+					font-weight: 600;
+				}
+			}
+			.table-cell__del {
+				button {
+					visibility: visible;
+				}
+			}
+		}
+	}
+	&-cell {
+		position: relative;
+		display: table-cell;
+		padding: 0.75rem 0.8125rem;
+		font-size: 0.875rem;
+		width: 16.66666666666667%;
+		font-family: SourceSansPro-Regular;
+		vertical-align: center;
+		&:first-child {
+			width: 5%;
+		}
+		&__del {
+			button {
+				display: flex;
+				align-items: center;
+				background: none;
+				border: none;
+				cursor: pointer;
+				font-family: SourceSansPro-Regular;
+				font-size: 0.875rem;
+				visibility: hidden;
+				&:before {
+					content: "";
+					display: block;
+					background: url('../img/trash.png') no-repeat center center;
+					width: 1rem;
+					height: 1rem;
+					margin-right: 0.3125rem;
+				}
+			}
+		}
+		&__confirm {
+		  position: absolute;
+	      top: 2.6rem;
+	      left: -7.5rem;
+	      min-width: 15.875rem;
+	      background: #ffffff;
+	      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+	      padding: 1rem;
+	      border-radius: 0.25rem;
+	      z-index: 1000;
+	      display: none;
+	      &.show {
+	        display: block;
+	      }
+	      p {
+	        text-align: center;
+	        margin-bottom: 0.6875rem;
+	      }
+	      &>div {
+	        display: flex;
+	        justify-content: center;
+	        align-items: center;
+	        &>div {
+	          margin-left: 1rem;
+	        }
+	      }
+	      &-btn {
+	        display: block;
+	        color: #3D374A;
+	        text-decoration: none;
+	        padding: 0.5rem 1rem;
+	        border-radius: 0.125rem;
+	        background: #ffffff;
+	        border: 1px solid #C6CBD4;
+	        cursor: pointer;
+	        &_green {
+	          background: #00A11E;
+	          color: #ffffff;
+	          border: 1px solid #00A11E;
+	        }
+	      }
+		}
+	}
+}
+
+@import 'media.scss';

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <main>
+      <div class="table-caption">
+        <div class="table-caption__block">
+          <div class="table-caption__item"><span>Sorting by:</span></div>
+          <div class="table-caption__item"><a class="table-caption__link active" href="#">Product(100g serving) </a></div>
+          <div class="table-caption__item"><a class="table-caption__link" href="#">Calories</a></div>
+          <div class="table-caption__item"><a class="table-caption__link" href="#">Fat(g)</a></div>
+          <div class="table-caption__item"><a class="table-caption__link" href="#">Carbs(g)</a></div>
+          <div class="table-caption__item"><a class="table-caption__link" href="#">Protein(g)</a></div>
+          <div class="table-caption__item"><a class="table-caption__link" href="#">Iron(%)</a></div>
+        </div>
+        <div class="table-caption__block">
+          <div class="table-caption__item"><a class="table-caption__btn disabled" href="#">Delete</a></div>
+          <div class="table-caption__item"><a class="table-caption__select" href="#"><span>10 Per Page</span></a>
+            <div class="table-caption__select-menu" data-simplebar>
+              <div class="table-caption__select-row">
+                <div class="table-caption__item-text">10 Per Page</div>
+              </div>
+              <div class="table-caption__select-row">
+                <div class="table-caption__item-text">20 Per Page</div>
+              </div>
+              <div class="table-caption__select-row">
+                <div class="table-caption__item-text">30 Per Page</div>
+              </div>
+              <div class="table-caption__select-row">
+                <div class="table-caption__item-text">40 Per Page</div>
+              </div>
+              <div class="table-caption__select-row">
+                <div class="table-caption__item-text">50 Per Page</div>
+              </div>
+              <div class="table-caption__select-row">
+                <div class="table-caption__item-text">60 Per Page</div>
+              </div>
+              <div class="table-caption__select-row">
+                <div class="table-caption__item-text">70 Per Page</div>
+              </div>
+              <div class="table-caption__select-row">
+                <div class="table-caption__item-text">80 Per Page</div>
+              </div>
+              <div class="table-caption__select-row">
+                <div class="table-caption__item-text">90 Per Page</div>
+              </div>
+              <div class="table-caption__select-row">
+                <div class="table-caption__item-text">100 Per Page</div>
+              </div>
+            </div>
+          </div>
+          <div class="table-caption__item">
+            <div class="table-caption__input-group">
+              <div>
+                <button class="table-caption__input-btn" type="button" data-type="minus" data-field="quant"><span class="table-caption__arrow-l"></span></button>
+              </div>
+              <div><span class="table-caption__input-numbers">1-2 of 25</span></div>
+              <div>
+                <button class="table-caption__input-btn" type="button" data-type="minus" data-field="quant"><span class="table-caption__arrow-r"></span></button>
+              </div>
+            </div>
+          </div>
+          <div class="table-caption__item"><a class="table-caption__select" href="#"><span>6 columns selected</span></a>
+            <div class="table-caption__select-menu" data-simplebar>
+              <div class="table-caption__select-item">
+                <label class="container"><span class="checkbox-label">Select All</span>
+                  <input class="checkbox" type="checkbox"><span class="checkmark"> </span>
+                </label>
+              </div>
+              <div class="table-caption__select-item">
+                <label class="container"><span class="checkbox-label">Product(100g serving)</span>
+                  <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="table-caption__select-item">
+                <label class="container"><span class="checkbox-label">Calories</span>
+                  <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="table-caption__select-item">
+                <label class="container"><span class="checkbox-label">Fat(g)</span>
+                  <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="table-caption__select-item">
+                <label class="container"><span class="checkbox-label">Carbs(g)</span>
+                  <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="table-caption__select-item">
+                <label class="container"><span class="checkbox-label">Protein(g)</span>
+                  <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="table-caption__select-item">
+                <label class="container"><span class="checkbox-label">Iron(%)</span>
+                  <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table">
+        <div class="table-head">
+          <div class="table-h">
+            <label class="container">
+              <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="table-h active">Product (100g serving)</div>
+          <div class="table-h">Calories</div>
+          <div class="table-h">Fat</div>
+          <div class="table-h">Carbs</div>
+          <div class="table-h">Protein</div>
+          <div class="table-h">Iron</div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">
+            <label class="container">
+              <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="table-cell"><span>Frozen Yogurt</span></div>
+          <div class="table-cell">125</div>
+          <div class="table-cell">224</div>
+          <div class="table-cell">486</div>
+          <div class="table-cell">696</div>
+          <div class="table-cell">536</div>
+          <div class="table-cell">
+            <div class="table-cell__del">
+              <button>delete</button>
+            </div>
+            <div class="table-cell__confirm">
+              <p>Are you sure you want to delete item?</p>
+              <div>
+                <div>
+                  <button class="table-cell__confirm-btn">Cancel</button>
+                </div>
+                <div>
+                  <button class="table-cell__confirm-btn table-cell__confirm-btn_green">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">
+            <label class="container">
+              <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="table-cell"><span>Ice cream sandwich</span></div>
+          <div class="table-cell">851</div>
+          <div class="table-cell">519</div>
+          <div class="table-cell">735</div>
+          <div class="table-cell">461</div>
+          <div class="table-cell">366</div>
+          <div class="table-cell">
+            <div class="table-cell__del">
+              <button>delete</button>
+            </div>
+            <div class="table-cell__confirm">
+              <p>Are you sure you want to delete item?</p>
+              <div>
+                <div>
+                  <button class="table-cell__confirm-btn">Cancel</button>
+                </div>
+                <div>
+                  <button class="table-cell__confirm-btn table-cell__confirm-btn_green">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">
+            <label class="container">
+              <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="table-cell"><span>Eclair</span></div>
+          <div class="table-cell">387</div>
+          <div class="table-cell">981</div>
+          <div class="table-cell">745</div>
+          <div class="table-cell">865</div>
+          <div class="table-cell">138</div>
+          <div class="table-cell">
+            <div class="table-cell__del">
+              <button>delete</button>
+            </div>
+            <div class="table-cell__confirm">
+              <p>Are you sure you want to delete item?</p>
+              <div>
+                <div>
+                  <button class="table-cell__confirm-btn">Cancel</button>
+                </div>
+                <div>
+                  <button class="table-cell__confirm-btn table-cell__confirm-btn_green">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">
+            <label class="container">
+              <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="table-cell"><span>Cupcake</span></div>
+          <div class="table-cell">106</div>
+          <div class="table-cell">758</div>
+          <div class="table-cell">717</div>
+          <div class="table-cell">168</div>
+          <div class="table-cell">306</div>
+          <div class="table-cell">
+            <div class="table-cell__del">
+              <button>delete</button>
+            </div>
+            <div class="table-cell__confirm">
+              <p>Are you sure you want to delete item?</p>
+              <div>
+                <div>
+                  <button class="table-cell__confirm-btn">Cancel</button>
+                </div>
+                <div>
+                  <button class="table-cell__confirm-btn table-cell__confirm-btn_green">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">
+            <label class="container">
+              <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="table-cell"><span>Gingerbread</span></div>
+          <div class="table-cell">889</div>
+          <div class="table-cell">46</div>
+          <div class="table-cell">493</div>
+          <div class="table-cell">19</div>
+          <div class="table-cell">846</div>
+          <div class="table-cell">
+            <div class="table-cell__del">
+              <button>delete</button>
+            </div>
+            <div class="table-cell__confirm">
+              <p>Are you sure you want to delete item?</p>
+              <div>
+                <div>
+                  <button class="table-cell__confirm-btn">Cancel</button>
+                </div>
+                <div>
+                  <button class="table-cell__confirm-btn table-cell__confirm-btn_green">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">
+            <label class="container">
+              <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="table-cell"><span>Jelly bean</span></div>
+          <div class="table-cell">987</div>
+          <div class="table-cell">77</div>
+          <div class="table-cell">421</div>
+          <div class="table-cell">820</div>
+          <div class="table-cell">484</div>
+          <div class="table-cell">
+            <div class="table-cell__del">
+              <button>delete</button>
+            </div>
+            <div class="table-cell__confirm">
+              <p>Are you sure you want to delete item?</p>
+              <div>
+                <div>
+                  <button class="table-cell__confirm-btn">Cancel</button>
+                </div>
+                <div>
+                  <button class="table-cell__confirm-btn table-cell__confirm-btn_green">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">
+            <label class="container">
+              <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="table-cell"><span>Lollipop</span></div>
+          <div class="table-cell">80</div>
+          <div class="table-cell">822</div>
+          <div class="table-cell">268</div>
+          <div class="table-cell">331</div>
+          <div class="table-cell">638</div>
+          <div class="table-cell">
+            <div class="table-cell__del">
+              <button>delete</button>
+            </div>
+            <div class="table-cell__confirm">
+              <p>Are you sure you want to delete item?</p>
+              <div>
+                <div>
+                  <button class="table-cell__confirm-btn">Cancel</button>
+                </div>
+                <div>
+                  <button class="table-cell__confirm-btn table-cell__confirm-btn_green">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">
+            <label class="container">
+              <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="table-cell"><span>Honeycomb</span></div>
+          <div class="table-cell">995</div>
+          <div class="table-cell">209</div>
+          <div class="table-cell">198</div>
+          <div class="table-cell">345</div>
+          <div class="table-cell">407</div>
+          <div class="table-cell">
+            <div class="table-cell__del">
+              <button>delete</button>
+            </div>
+            <div class="table-cell__confirm">
+              <p>Are you sure you want to delete item?</p>
+              <div>
+                <div>
+                  <button class="table-cell__confirm-btn">Cancel</button>
+                </div>
+                <div>
+                  <button class="table-cell__confirm-btn table-cell__confirm-btn_green">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">
+            <label class="container">
+              <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="table-cell"><span>Donut</span></div>
+          <div class="table-cell">919</div>
+          <div class="table-cell">576</div>
+          <div class="table-cell">999</div>
+          <div class="table-cell">134</div>
+          <div class="table-cell">584</div>
+          <div class="table-cell">
+            <div class="table-cell__del">
+              <button>delete</button>
+            </div>
+            <div class="table-cell__confirm">
+              <p>Are you sure you want to delete item?</p>
+              <div>
+                <div>
+                  <button class="table-cell__confirm-btn">Cancel</button>
+                </div>
+                <div>
+                  <button class="table-cell__confirm-btn table-cell__confirm-btn_green">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">
+            <label class="container">
+              <input class="checkbox" type="checkbox"><span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="table-cell"><span>KitKat</span></div>
+          <div class="table-cell">183</div>
+          <div class="table-cell">45</div>
+          <div class="table-cell">490</div>
+          <div class="table-cell">303</div>
+          <div class="table-cell">175</div>
+          <div class="table-cell">
+            <div class="table-cell__del">
+              <button>delete</button>
+            </div>
+            <div class="table-cell__confirm">
+              <p>Are you sure you want to delete item?</p>
+              <div>
+                <div>
+                  <button class="table-cell__confirm-btn">Cancel</button>
+                </div>
+                <div>
+                  <button class="table-cell__confirm-btn table-cell__confirm-btn_green">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-overlay"></div>
+    </main>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

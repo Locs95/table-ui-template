@@ -1,0 +1,40 @@
+@media (max-width: 1500px) {
+	main {
+		width: 80%;
+	}
+}
+@media (max-width: 1400px) {
+	main {
+		width: 90%;
+	}
+	.table {
+		&-caption {
+			&__select {
+				&-menu {
+					left: -4.86rem;
+				}
+			}
+		}
+		&-cell {
+			&__confirm {
+				left: -12.7rem;
+			}
+		}
+	}
+}
+@media (max-width: 1250px) {
+	main {
+		width: 97%;
+	}
+	.table {
+		&-caption {
+			flex-direction: column;
+			align-items: center;
+			&__block {
+				&:first-child {
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+}

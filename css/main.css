@@ -1,0 +1,213 @@
+[data-simplebar] {
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.simplebar-wrapper {
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  max-height: inherit;
+}
+
+.simplebar-mask {
+  direction: inherit;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: auto !important;
+  height: auto !important;
+  z-index: 0;
+}
+
+.simplebar-offset {
+  direction: inherit !important;
+  box-sizing: inherit !important;
+  resize: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.simplebar-content-wrapper {
+  direction: inherit;
+  box-sizing: border-box !important;
+  position: relative;
+  display: block;
+  height: 100%; /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */
+  width: auto;
+  visibility: visible;
+  max-width: 100%; /* Not required for horizontal scroll to trigger */
+  max-height: 100%; /* Needed for vertical scroll to trigger */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.simplebar-content-wrapper::-webkit-scrollbar,
+.simplebar-hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.simplebar-content:before,
+.simplebar-content:after {
+  content: ' ';
+  display: table;
+}
+
+.simplebar-placeholder {
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.simplebar-height-auto-observer-wrapper {
+  box-sizing: inherit !important;
+  height: 100%;
+  width: 100%;
+  max-width: 1px;
+  position: relative;
+  float: left;
+  max-height: 1px;
+  overflow: hidden;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  flex-grow: inherit;
+  flex-shrink: 0;
+  flex-basis: 0;
+}
+
+.simplebar-height-auto-observer {
+  box-sizing: inherit;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1000%;
+  width: 1000%;
+  min-height: 1px;
+  min-width: 1px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.simplebar-track {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+[data-simplebar].simplebar-dragging .simplebar-content {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+[data-simplebar].simplebar-dragging .simplebar-track {
+  pointer-events: all;
+}
+
+.simplebar-scrollbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-height: 10px;
+}
+
+.simplebar-scrollbar:before {
+  position: absolute;
+  content: '';
+  background: black;
+  border-radius: 7px;
+  left: 2px;
+  right: 2px;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  /* When hovered, remove all transitions from drag handle */
+  opacity: 0.5;
+  transition: opacity 0s linear;
+}
+
+.simplebar-track.simplebar-vertical {
+  top: 0;
+  width: 11px;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 2px;
+  bottom: 2px;
+}
+
+.simplebar-track.simplebar-horizontal {
+  left: 0;
+  height: 11px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  height: 100%;
+  left: 2px;
+  right: 2px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  right: auto;
+  left: 0;
+  top: 2px;
+  height: 7px;
+  min-height: 0;
+  min-width: 10px;
+  width: auto;
+}
+
+/* Rtl support */
+[data-simplebar-direction='rtl'] .simplebar-track.simplebar-vertical {
+  right: auto;
+  left: 0;
+}
+
+.hs-dummy-scrollbar-size {
+  direction: rtl;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  height: 500px;
+  width: 500px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.simplebar-hide-scrollbar {
+  position: fixed;
+  left: 0;
+  visibility: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+@font-face{font-family:SourceSansPro-Regular;src:url("../fonts/SourceSansPro-Regular.ttf")}.container{align-items:center;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-size:0.875rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.checkbox-label{position:relative;top:-0.157rem}.container input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}.checkmark{position:absolute;top:0;left:0;height:0.875rem;width:0.875rem;background-color:#eee}.container:hover input ~ .checkmark{background-color:#ccc}.container input:checked ~ .checkmark{background-color:#00A11E}.checkmark:after{content:"";position:absolute;display:none}.container input:checked ~ .checkmark:after{display:block}.container .checkmark:after{left:4px;top:1px;width:3px;height:7px;border:solid white;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}*{margin:0;padding:0}button:active,button:focus{outline:none}select{-webkit-appearance:none;appearance:none}select::-ms-expand{display:none}select:focus{outline:none}.main-overlay{position:fixed;top:0;left:0;width:100%;min-height:100%;display:none}main{width:75%;min-width:768px;margin:0 auto}.table{display:table;width:100%}.table-caption{display:flex;justify-content:space-between;margin:0.9375rem 0}.table-caption__block{display:flex}.table-caption__item{position:relative;display:flex;align-items:center;font-family:SourceSansPro-Regular;font-size:0.875rem;margin-right:0.5rem}.table-caption__item:first-child span{font-weight:600}.table-caption__item:last-child{margin-right:0}.table-caption__link{display:block;color:#3D374A;text-decoration:none;padding:0.5rem 0.5rem;border-radius:0.125rem}.table-caption__link.active{background:#00A11E;color:#ffffff}.table-caption__btn{display:inline-block;padding:0.5rem 1rem;text-decoration:none;border:1px solid #00A11E;border-radius:0.125rem;background:#00A11E;color:#ffffff}.table-caption__btn.disabled{color:#5B5E77;border:1px solid #C6CBD4;background:#F2F2F2;pointer-events:none}.table-caption__select{display:flex;justify-content:center;align-items:center;padding-left:1.6rem;padding-right:1.6rem;height:2.1rem;border:1px solid #D5DAE0;border-radius:0.125rem;color:#5B5E77;background:url("../img/arrow-down.png") no-repeat 92% center;background-position:auto auto;text-decoration:none}.table-caption__select-menu{position:absolute;top:3.175rem;left:0;padding:1.3125rem 1.0625rem;width:12.9375rem;height:15.1875rem;overflow-y:auto;border:1px solid #ddd;background:#fff;box-shadow:0px 2px 8px rgba(0,0,0,0.16);border-radius:0.25rem;z-index:9999;display:none}.table-caption__select-menu.show{display:block}.table-caption__select-row{margin-bottom:1.4375rem;cursor:pointer}.table-caption__select-row:last-child{margin-bottom:0}.table-caption__input-group{display:flex;align-items:center}.table-caption__input-btn{padding:0.2900rem 0.8rem;font-size:1.3rem;background:#ffffff;border:1px solid #D5DAE0;border-radius:0.125rem}.table-caption__arrow-l{display:block;background:url("../img/arrow-left.png") no-repeat center center;width:0.5rem;height:1.5rem}.table-caption__arrow-r{display:block;background:url("../img/arrow-right.png") no-repeat center center;width:0.5rem;height:1.5rem}.table-caption__input-numbers{margin:0 0.5rem;color:#3D374A;font-weight:600}.table-head{display:table-header-group}.table-h{display:table-cell;padding:0.75rem 0.8125rem;font-size:0.875rem;font-family:SourceSansPro-Regular;font-weight:600}.table-h.active{color:#00A11E}.table-h.active::after{position:relative;top:0.230rem;margin-left:0.2rem;content:"";display:inline-block;background:url("../img/sort-arrow-up.png") no-repeat center center;width:1rem;height:1rem}.table-row{display:table-row;cursor:pointer;transition:all 0.1s}.table-row:nth-child(even){background-color:#ffffff}.table-row:nth-child(odd){background-color:#F8F9FA}.table-row:hover{background:rgba(0,161,30,0.07)}.table-row:hover>.table-cell span{color:#282136;font-weight:600}.table-row:hover .table-cell__del button{visibility:visible}.table-cell{position:relative;display:table-cell;padding:0.75rem 0.8125rem;font-size:0.875rem;width:16.66666666666667%;font-family:SourceSansPro-Regular;vertical-align:center}.table-cell:first-child{width:5%}.table-cell__del button{display:flex;align-items:center;background:none;border:none;cursor:pointer;font-family:SourceSansPro-Regular;font-size:0.875rem;visibility:hidden}.table-cell__del button:before{content:"";display:block;background:url("../img/trash.png") no-repeat center center;width:1rem;height:1rem;margin-right:0.3125rem}.table-cell__confirm{position:absolute;top:2.6rem;left:-7.5rem;min-width:15.875rem;background:#ffffff;box-shadow:0px 2px 8px rgba(0,0,0,0.16);padding:1rem;border-radius:0.25rem;z-index:1000;display:none}.table-cell__confirm.show{display:block}.table-cell__confirm p{text-align:center;margin-bottom:0.6875rem}.table-cell__confirm>div{display:flex;justify-content:center;align-items:center}.table-cell__confirm>div>div{margin-left:1rem}.table-cell__confirm-btn{display:block;color:#3D374A;text-decoration:none;padding:0.5rem 1rem;border-radius:0.125rem;background:#ffffff;border:1px solid #C6CBD4;cursor:pointer}.table-cell__confirm-btn_green{background:#00A11E;color:#ffffff;border:1px solid #00A11E}@media (max-width: 1500px){main{width:80%}}@media (max-width: 1400px){main{width:90%}.table-caption__select-menu{left:-4.86rem}.table-cell__confirm{left:-12.7rem}}@media (max-width: 1250px){main{width:97%}.table-caption{flex-direction:column;align-items:center}.table-caption__block:first-child{margin-bottom:1rem}}
